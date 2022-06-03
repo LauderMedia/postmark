@@ -1,12 +1,12 @@
 # Postmark
 
-[![Build Status](https://travis-ci.org/keighl/postmark.png?branch=master)](https://travis-ci.org/keighl/postmark) [![Go Report Card](https://goreportcard.com/badge/github.com/keighl/postmark)](https://goreportcard.com/report/github.com/keighl/postmark)  [![codecov.io](https://codecov.io/github/keighl/postmark/coverage.svg?branch=master)](https://codecov.io/github/keighl/postmark?branch=master) [![GoDoc](https://godoc.org/github.com/keighl/postmark?status.svg)](https://godoc.org/github.com/keighl/postmark)
+[![Build Status](https://travis-ci.org/keighl/postmark.png?branch=master)](https://travis-ci.org/keighl/postmark) [![Go Report Card](https://goreportcard.com/badge/https://github.com/LauderMedia/postmark)](https://goreportcard.com/report/https://github.com/LauderMedia/postmark)  [![codecov.io](https://codecov.io/github/keighl/postmark/coverage.svg?branch=master)](https://codecov.io/github/keighl/postmark?branch=master) [![GoDoc](https://godoc.org/https://github.com/LauderMedia/postmark?status.svg)](https://godoc.org/https://github.com/LauderMedia/postmark)
 
 A Golang package for the using Postmark API.
 
 ### Installation
 
-    go get -u github.com/keighl/postmark
+    go get -u github.com/LauderMedia/postmark
 
 ### Basic Usage
 
@@ -14,7 +14,7 @@ Grab your [`Server Token`](https://account.postmarkapp.com/servers/XXXX/credenti
 
 ```go
 import (
-    "github.com/keighl/postmark"
+    "https://github.com/LauderMedia/postmark"
 )
 
 client := postmark.NewClient("[SERVER-TOKEN]", "[ACCOUNT-TOKEN]")
@@ -25,6 +25,7 @@ email := postmark.Email{
 	Subject: "Reset your password",
 	HtmlBody: "...",
     TextBody: "...",
+    MessageStream: "...",
 	Tag: "pw-reset",
 	TrackOpens: true,
 }
@@ -38,7 +39,7 @@ Swap out HTTPClient for use on Google App Engine:
 
 ```go
 import (
-    "github.com/keighl/postmark"
+    "https://github.com/LauderMedia/postmark"
     "google.golang.org/appengine"
     "google.golang.org/appengine/urlfetch"
 )
